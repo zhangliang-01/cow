@@ -1,0 +1,10 @@
+
+server:
+    port: 8088
+
+spring :
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://1.15.25.166:3306/riches?characterEncoding=utf8&useSSL=false
+      username: root
+      password: 123456
