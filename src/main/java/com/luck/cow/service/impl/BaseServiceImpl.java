@@ -1,8 +1,11 @@
 package com.luck.cow.service.impl;
 
 import cn.hutool.core.date.DateUtil;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.luck.cow.dto.DiaryMainDTO;
 import com.luck.cow.entity.DiaryMain;
 import com.luck.cow.param.DiaryMainParam;
+import com.luck.cow.param.DiaryPageParam;
 import com.luck.cow.service.BaseService;
 import com.luck.cow.service.IDiaryMainService;
 import org.thymeleaf.util.DateUtils;
@@ -41,5 +44,10 @@ public class BaseServiceImpl implements BaseService {
 
 
         return iDiaryMainService.addDiaryMain(diaryMain);
+    }
+
+    @Override
+    public Page<DiaryMainDTO> getPage(DiaryPageParam param, Integer count, Integer size) {
+        return iDiaryMainService.getPage(param,count,size);
     }
 }
